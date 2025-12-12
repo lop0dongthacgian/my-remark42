@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Test Remark42 — Bình luận không cần đăng nhập</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 700px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+    h1 { color: #1a1a1a; }
+    .note { background: #f8f9fa; padding: 1rem; border-radius: 6px; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <h1>📄 Bài viết mẫu</h1>
+  <p>Đây là nội dung bài viết. Phần bình luận ở dưới — thử nhập:</p>
+  <div class="note">
+    <strong>Tên:</strong> Khách<br>
+    <strong>Email:</strong> khach@local.test (không cần thật)<br>
+    <strong>Bình luận:</strong> Xin chào! Đây là comment ẩn danh.
+  </div>
+
+  <!-- 🗨️ Remark42 Embed — BẠN CHỈ CẦN SỬA 2 DÒNG CÓ `xyz.up.railway.app` -->
+  <div id="remark42"></div>
+  <script>
+    var remark_config = {
+      host: "https://xyz.up.railway.app",   // ✏️ THAY BẰNG URL CỦA BẠN
+      site_id: 'blog1',                    // ✏️ Phải khớp với SITE trong Railway
+      components: ['embed'],
+      max_shown_comments: 10,
+      locale: 'vi',                        // 🇻🇳 Tiếng Việt
+      theme: 'auto'                        // Tự động dark/light
+    };
+  </script>
+  <script src="https://xyz.up.railway.app/web/remark42.min.js" async></script>
+
+  <hr>
+  <small>💡 Bình luận được lưu trên server của bạn — không phụ thuộc bên thứ ba.</small>
+</body>
+</html>

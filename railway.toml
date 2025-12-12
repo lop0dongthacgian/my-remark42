@@ -1,0 +1,11 @@
+# Cấu hình deploy Remark42 trên Railway.app
+# Xem hướng dẫn: https://railway.app/docs/deployments/configuration
+
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+startCommand = "/srv/remark42 server"
+healthcheckPath = "/api/v1/health"
+healthcheckTimeout = 300
